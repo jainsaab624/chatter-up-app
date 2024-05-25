@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chatter up App</title>
+
+    <!-- font-awesome link -->
+    <script
+      src="https://kit.fontawesome.com/ec8788047a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container bg-light p-4 pb-1 h-auto">
+      <div class="row">
+        <section class="col-md-9" id="msg-container">
+          <!-- header contains username of who is online and green dot and a welcome message -->
+          <header
+            class="chat-header-input-color p-2 d-flex align-item-center"
+            id="user-details"
+          >
+            <span id="green dot" class="ms-2">
+              <i class="fa-solid fa-circle me-2" id="online"></i>
+            </span>
+          </header>
+          <!-- header ends here -->
+
+          <!-- main part contains all the chats of the users -->
+          <main id="user-chats" class="p-2 d-flex flex-column"></main>
+          <!-- main section ends -->
+
+          <form action="" class="msg-input p2 chat-header-input-color">
+            <input
+              type="text"
+              class="input-box-bg-color p-2 border-0 me-2 w-75"
+              id="text-msg"
+              placeholder="Enter Your Message..."
+    
+            />
+
+            <button
+              type="button"
+              class="btn btn-success"
+              id="send-message"
+            >Send</button>
+          </form>
+        </section>
+        <!-- end section -->
+        <!-- connected users -->
+        <div class="col-md-3" id="connected-users">
+            <span class="badge text-bg-primary mt-4 mb-1 w-100" id="users-count-display">Users connected 0</span>
+
+            <div id="users-display"></div>
+        </div>
+      </div>
+    </div>
+
+    <audio id="incomingMessageSound" src="assets/incoming_message_audio.mp3"></audio>
+
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Importing socket server from browser -->
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

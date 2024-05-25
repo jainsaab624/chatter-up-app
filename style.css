@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: linear-gradient(120deg, white, #d1dae9);
+}
+
+#user-chats {
+  height: 75vh;
+  background-image: url("./assets/bg.png");
+  background-position: center;
+  background-size: cover;
+  overflow-y: auto;
+}
+
+/* width */
+#user-chats::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+#user-chats::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+#user-chats::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+#user-chats::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.msg-input {
+  background-color: rgb(214, 214, 214);
+}
+
+#text-msg {
+  background-color: #dddddd;
+  box-shadow: 0 0px 20px 1px rgba(245, 242, 242, 0.2);
+}
+
+#online {
+  color: rgb(6, 171, 6);
+  font-size: 15px;
+}
+
+#msg-container {
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.chat-header-input-color {
+  background-color: #eeeeee;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Message Bubble */
+/* CSS */
+.message {
+  position: relative;
+  background: #ececec;
+  border-radius: 15px 15px 15px 0px;
+  color: black;
+  padding: 10px;
+  margin-bottom: 10px;
+  max-width: 60%; /* Adjust based on your design needs */
+  word-wrap: break-word;
+}
+
+.message .username {
+  font-weight: bold;
+}
+
+.message .time {
+  font-size: 1em;
+  color: rgb(27, 26, 26);
+  margin-left: 0.6rem;
+}
+
+.message:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right-color: #01a3a4;
+  border-left: 0;
+  border-right: 0;
+  margin-top: -5px;
+  margin-left: -10px;
+}
+
+.align-right {
+  
+  align-self: flex-end;
+}
+
+.message-bg-blue {
+  background-color: #579ffb;
+}
+
+.white {
+  color: white;
+}
+
+.time-white {
+  font-size: 1em;
+  color: white;
+  margin-left: 0.6rem;
+}
